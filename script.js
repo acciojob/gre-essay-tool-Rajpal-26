@@ -6,7 +6,7 @@ let count = 0;
 evaluatedText.addEventListener("input", cal_word)
 
 function cal_word() {
-    let word = evaluatedText.ariaValueMax;
-    count = word.trim().split(' ').length;
+    let word = evaluatedText.value;
+    count = word.split(' ').filter((item) => item).length;
     wordCount.innerHTML = count;
 }
